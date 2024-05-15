@@ -238,7 +238,7 @@ public class Main {
         System.out.println(persona1.darNombreCompleto() + " tiene " + persona1.getEdad() + " años.");
     }
 
-    //Herencias y polimorfismos
+    //Herencias y polimorfismos y Statics
     public void herencias(){
         Animal animal = new Animal("Bestia", 15);
         Gato gato = new Gato("Niguiri", 1);
@@ -250,6 +250,9 @@ public class Main {
         System.out.println(gato.hacerSonido());
         System.out.println("El perro llamado: " + perro.nombre);
         System.out.println(perro.hacerSonido());
+
+        System.out.println("El total de animales creados es: " + Animal.getContadorDeAnimales());
+        System.out.println("Mis animales van a: " + Veterinaria.nombre);
 
     }
 }
