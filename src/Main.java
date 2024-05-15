@@ -1,12 +1,12 @@
 import Exceptions.CalculadoraException;
 import Exceptions.DividirPorCeroException;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         Main m = new Main();
-        m.errores();
+        m.colecciones2HashMap();
 
     }
 
@@ -306,6 +306,150 @@ public class Main {
             e.printStackTrace();
         }finally {
             System.out.println("Hemos finalizado el calculo sea exitoso o no");
+        }
+    }
+
+    //Manejo de colecciones
+    public void colecciones1HashSet(){
+        System.out.println("Bienvenido a la fiesta de los superheroes!");
+
+        Set<String> superheroes = new HashSet<>();
+        superheroes.add("Spiderman");
+        superheroes.add("Batman");
+        superheroes.add("CatWoman");
+        superheroes.add("Hulk");
+        superheroes.add("WonderWoman");
+        superheroes.add("IronMan");
+        superheroes.add("Superman");
+
+        if (superheroes.contains("Spiderman")){
+            System.out.println("Spiderman esta en la fiesta");
+        }
+
+        superheroes.remove("Hulk");
+
+        if (!superheroes.contains("Hulk")){
+            System.out.println("Hulk se bajo del carro");
+        }
+
+        superheroes.add("Superman");
+
+        if (superheroes.isEmpty()){
+            System.out.println("La fiesta ha acabado");
+        }else{
+            System.out.println("Aun hay " + superheroes.size() + " superheroes en la fiesta");
+        }
+
+        for (String superheroe : superheroes){
+            System.out.println(superheroe);
+        }
+
+    }
+
+    public void colecciones1TreeSet(){
+        System.out.println("Bienvenido a la fiesta de los superheroes!");
+
+        Set<String> superheroes = new TreeSet<>();
+        superheroes.add("Spiderman");
+        superheroes.add("Batman");
+        superheroes.add("CatWoman");
+        superheroes.add("Hulk");
+        superheroes.add("WonderWoman");
+        superheroes.add("IronMan");
+        superheroes.add("Superman");
+
+        if (superheroes.contains("Spiderman")){
+            System.out.println("Spiderman esta en la fiesta");
+        }
+
+        superheroes.remove("Hulk");
+
+        if (!superheroes.contains("Hulk")){
+            System.out.println("Hulk se bajo del carro");
+        }
+
+        superheroes.add("Superman");
+
+        if (superheroes.isEmpty()){
+            System.out.println("La fiesta ha acabado");
+        }else{
+            System.out.println("Aun hay " + superheroes.size() + " superheroes en la fiesta");
+        }
+
+        for (String superheroe : superheroes) {
+            System.out.println(superheroe);
+        }
+    }
+
+    public void colecciones1LinkedHashSet(){
+        System.out.println("Bienvenido a la fiesta de los superheroes!");
+
+        Set<String> superheroes = new LinkedHashSet<>();
+        superheroes.add("Spiderman");
+        superheroes.add("Batman");
+        superheroes.add("CatWoman");
+        superheroes.add("Hulk");
+        superheroes.add("WonderWoman");
+        superheroes.add("IronMan");
+        superheroes.add("Superman");
+
+        if (superheroes.contains("Spiderman")){
+            System.out.println("Spiderman esta en la fiesta");
+        }
+
+        superheroes.remove("Hulk");
+
+        if (!superheroes.contains("Hulk")){
+            System.out.println("Hulk se bajo del carro");
+        }
+
+        superheroes.add("Superman");
+
+        if (superheroes.isEmpty()){
+            System.out.println("La fiesta ha acabado");
+        }else{
+            System.out.println("Aun hay " + superheroes.size() + " superheroes en la fiesta");
+        }
+
+        for (String superheroe : superheroes) {
+            System.out.println(superheroe);
+        }
+    }
+
+    public void colecciones2HashMap(){
+        System.out.println("Bienvenido a nuestra fruteria");
+
+        Map<String, Double> inventario = new HashMap<>();
+
+        inventario.put("Banana", 1.89);
+        inventario.put("Tomate", 1.32);
+        inventario.put("Palta", 1.74);
+        inventario.put("Fresa", 2.19);
+        inventario.put("Pimiento", 4.89);
+
+        System.out.println("Inventario de frutas y verduras: ");
+
+        // KeySet me da un array con las keys
+        for(String fruta : inventario.keySet()){
+            System.out.println(fruta + ": €" + inventario.get(fruta)); // Con el get puedo acceder al valor del key
+        }
+
+        String frutaBuscada = "Fresa";
+        System.out.println("Se acerca un cliente y nos pide la siguiente fruta: ");
+
+        if(inventario.containsKey(frutaBuscada)){
+            System.out.println(frutaBuscada + " esta en el inventario");
+        }else{
+            System.out.println("Lamentablemente nos quedamos sin " + frutaBuscada);
+        }
+
+        String sinStock = "Fresa";
+        inventario.remove(sinStock);
+
+        System.out.println("Nos hemos quedado sin " + sinStock);
+
+        for(String fruta : inventario.keySet()){
+            System.out.println(fruta + ": €" + inventario.get(fruta)); // Con el get puedo acceder al valor del key
         }
     }
 }
