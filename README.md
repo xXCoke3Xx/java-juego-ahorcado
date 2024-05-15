@@ -4,3 +4,5 @@ Hay un par de ejercicios como un ahorcado, comprobar si números son múltiplos 
 
 ## ¿Qué herramientas utilizamos?
 1. Matrices
+2. Programacion orientada a objetos
+3. Herencias e interfaces

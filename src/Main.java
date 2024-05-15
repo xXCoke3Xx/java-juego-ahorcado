@@ -3,8 +3,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Main m = new Main();
+        // m.ejercicio2();
 
-        m.ejercicio2();
+        Persona persona1 = new Persona("Raul", "Perez", 40, "Arquitecto", 6, true);
+
+        System.out.println(persona1.darNombreCompleto() + " tiene " + persona1.edad + " años y esta estudiando " + persona1.carrera.nombre);
 
     }
 
