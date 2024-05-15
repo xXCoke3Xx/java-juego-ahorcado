@@ -8,3 +8,4 @@ Hay un par de ejercicios como un ahorcado, comprobar si números son múltiplos 
 3. Herencias e interfaces
 4. Objetos y trabajamos con ellos
 5. Getters y Setters
+6. Herencias y polimorfismos
