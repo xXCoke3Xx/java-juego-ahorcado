@@ -5,9 +5,11 @@ public class Main {
         Main m = new Main();
         // m.ejercicio2();
 
-        Persona persona1 = new Persona("Raul", "Perez", 40, "Arquitecto", 6, true);
+        Persona persona1 = new Persona("Raul", "Perez", 40);
+        persona1.setNombre("Ricardo");
+        persona1.setApellido("Milos");
 
-        System.out.println(persona1.darNombreCompleto() + " tiene " + persona1.edad + " años y esta estudiando " + persona1.carrera.nombre);
+        System.out.println(persona1.darNombreCompleto() + " tiene " + persona1.getEdad() + " años.");
 
     }
 
