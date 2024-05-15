@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Main m = new Main();
-        m.herencias();
+        m.abstractas();
 
     }
 
@@ -253,6 +253,19 @@ public class Main {
 
         System.out.println("El total de animales creados es: " + Animal.getContadorDeAnimales());
         System.out.println("Mis animales van a: " + Veterinaria.nombre);
+
+    }
+
+    //Clases abstractas
+    public void abstractas(){
+
+        Circulo circulo = new Circulo(10);
+        Rectangulo rectangulo = new Rectangulo(8, 6);
+
+        circulo.imprimirInformacion();
+        System.out.println("Area del circulo es: " + circulo.calcularArea());
+        rectangulo.imprimirInformacion();
+        System.out.println("Area del rectangulo es: " + rectangulo.calcularArea());
 
     }
 }
