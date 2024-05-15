@@ -12,3 +12,4 @@ Hay un par de ejercicios como un ahorcado, comprobar si números son múltiplos 
 7. Statics
 8. Clases abstractas
 9. Interfaces
+10. Manejo de errores: try catch

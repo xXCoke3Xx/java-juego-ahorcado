@@ -1,9 +1,12 @@
+import Exceptions.CalculadoraException;
+import Exceptions.DividirPorCeroException;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Main m = new Main();
-        m.interfaces();
+        m.errores();
 
     }
 
@@ -283,5 +286,26 @@ public class Main {
         pulpo.comunicarse();
         pulpo.alimentar();
 
+    }
+
+    //Manejo de errores / excepciones > Try Catch
+    public void errores(){
+        // Excepciones: eventos que interrumpen el flujo normal de la aplicacion
+        // Unchecked y checked
+
+        int numero1 = 10;
+        int numero2 = 0;
+        int resultado;
+
+        Calculadora calc = new Calculadora();
+
+        try{
+            resultado = calc.dividir(numero1, numero2);
+            System.out.println(resultado);
+        }catch(CalculadoraException e){
+            e.printStackTrace();
+        }finally {
+            System.out.println("Hemos finalizado el calculo sea exitoso o no");
+        }
     }
 }
