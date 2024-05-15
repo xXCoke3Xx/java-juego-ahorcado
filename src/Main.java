@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Main m = new Main();
-        m.abstractas();
+        m.interfaces();
 
     }
 
@@ -266,6 +266,22 @@ public class Main {
         System.out.println("Area del circulo es: " + circulo.calcularArea());
         rectangulo.imprimirInformacion();
         System.out.println("Area del rectangulo es: " + rectangulo.calcularArea());
+
+    }
+
+    //Interfaces
+    public void interfaces(){
+
+        Delfin delfin = new Delfin("Adolfina");
+        Pulpo pulpo = new Pulpo("Pol", 11);
+
+        delfin.nadar();
+        delfin.comunicarse();
+        delfin.alimentar();
+
+        pulpo.nadar();
+        pulpo.comunicarse();
+        pulpo.alimentar();
 
     }
 }
