@@ -3,13 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Main m = new Main();
-        // m.ejercicio2();
-
-        Persona persona1 = new Persona("Raul", "Perez", 40);
-        persona1.setNombre("Ricardo");
-        persona1.setApellido("Milos");
-
-        System.out.println(persona1.darNombreCompleto() + " tiene " + persona1.getEdad() + " años.");
+        m.herencias();
 
     }
 
@@ -232,6 +226,30 @@ public class Main {
             }
         }
         sc.close();
+
+    }
+
+    //Getters y Setters y objetos
+    public void getYSet(){
+        Persona persona1 = new Persona("Raul", "Perez", 40);
+        persona1.setNombre("Ricardo");
+        persona1.setApellido("Milos");
+
+        System.out.println(persona1.darNombreCompleto() + " tiene " + persona1.getEdad() + " años.");
+    }
+
+    //Herencias y polimorfismos
+    public void herencias(){
+        Animal animal = new Animal("Bestia", 15);
+        Gato gato = new Gato("Niguiri", 1);
+        Perro perro = new Perro("Mulan", 2);
+
+        System.out.println("El animal llamado: " + animal.nombre);
+        System.out.println(animal.hacerSonido());
+        System.out.println("El gato llamado: " + gato.nombre);
+        System.out.println(gato.hacerSonido());
+        System.out.println("El perro llamado: " + perro.nombre);
+        System.out.println(perro.hacerSonido());
 
     }
 }

@@ -6,3 +6,5 @@ Hay un par de ejercicios como un ahorcado, comprobar si números son múltiplos 
 1. Matrices
 2. Programacion orientada a objetos
 3. Herencias e interfaces
+4. Objetos y trabajamos con ellos
+5. Getters y Setters
